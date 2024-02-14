@@ -6,4 +6,4 @@
 
 ## 🔗 Link
 
-[Visit online](https://github.turtle-papa.io/frontendmentor-challenges/recipe-page)
+[Visit online](https://turtle-papa.github.io/frontendmentor-challenges/recipe-page/)
