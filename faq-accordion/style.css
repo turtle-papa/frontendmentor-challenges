@@ -1,0 +1,154 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url(./assets/fonts/static/WorkSans-Regular.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url(./assets/fonts/static/WorkSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "WorkSans";
+  src: url(./assets/fonts/static/WorkSans-Bold.ttf);
+  font-weight: 700;
+}
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-pink: hsl(275, 100%, 97%);
+  --clr-purple-400: hsl(292, 16%, 49%);
+  --clr-purple-500: hsl(292, 42%, 14%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "WorkSans";
+  line-height: 1.5;
+  background-color: var(--clr-light-pink);
+  background-image: url(./assets/images/background-pattern-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  justify-items: center;
+  align-items: center;
+}
+
+.faqs {
+  background-color: var(--clr-white);
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 20px -3px rgb(0 0 0 / 0.1);
+}
+
+.faqs__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.faqs__header h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.faq {
+  transition: all 0.2s;
+}
+
+.faq__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-top: solid 1px var(--clr-light-pink);
+}
+
+.faq:first-of-type .faq__header {
+  border-top: none;
+}
+
+.faq__header h2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.faq__header h2:hover {
+  color: #a928e7;
+}
+
+.faq img {
+  cursor: pointer;
+}
+
+.faq .icon-minus {
+  display: none;
+}
+
+.faq p {
+  padding: 1rem 0;
+  color: var(--clr-purple-400);
+  display: none;
+}
+
+.faq.active p {
+  display: block;
+}
+
+.faq.active .icon-plus {
+  display: none;
+}
+
+.faq.active .icon-minus {
+  display: block;
+}
+
+.footer {
+  padding: 1rem 0;
+  font-size: 14px;
+  color: var(--clr-purple-400);
+}
+
+.footer a:link,
+.footer a:visited {
+  color: var(--clr-purple-500);
+  font-weight: 600;
+  transition: all 0.2s;
+  opacity: 0.8;
+}
+
+.footer a:hover,
+.footer a:active {
+  font-weight: 700;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+
+    font-size: 14px;
+  }
+
+  .faqs {
+    margin: 0 5%;
+  }
+}
