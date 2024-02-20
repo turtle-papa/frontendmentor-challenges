@@ -6,4 +6,4 @@
 
 ## 🔗 Link
 
-[Visit online](https://turtle-papa.github.io/frontendmentor-challenges/order-summary-card/)
+[Visit online](https://turtle-papa.github.io/frontendmentor-challenges/order-summary-component/)
