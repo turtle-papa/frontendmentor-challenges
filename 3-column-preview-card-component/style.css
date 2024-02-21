@@ -1,0 +1,140 @@
+:root {
+  --clr-orange: hsl(31, 77%, 52%);
+  --clr-cyan-600: hsl(184, 100%, 22%);
+  --clr-cyan-700: hsl(179, 100%, 13%);
+
+  --clr-white-500: hsla(0, 0%, 100%, 0.75);
+  --clr-neutral-gray: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  align-items: center;
+  justify-items: center;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: var(--clr-neutral-gray);
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5;
+}
+
+.component {
+  max-width: 920px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.column {
+  max-width: 450px;
+  padding: 3rem;
+  color: var(--clr-white-500);
+}
+
+.column h2 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: var(--clr-neutral-gray);
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+.column button {
+  border: solid 2px var(--clr-neutral-gray);
+  border-radius: 666px;
+  background-color: var(--clr-neutral-gray);
+  padding: 1rem 2.2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.column button:hover {
+  color: var(--clr-neutral-gray);
+}
+
+.car--sedans {
+  background-color: var(--clr-orange);
+}
+
+.car--sedans button {
+  color: var(--clr-orange);
+}
+
+.car--sedans button:hover {
+  background-color: var(--clr-orange);
+}
+
+.car--suvs {
+  background-color: var(--clr-cyan-600);
+}
+
+.car--suvs button {
+  color: var(--clr-cyan-600);
+}
+
+.car--suvs button:hover {
+  background-color: var(--clr-cyan-600);
+}
+
+.car--luxury {
+  background-color: var(--clr-cyan-700);
+}
+
+.car--luxury button {
+  color: var(--clr-cyan-700);
+}
+
+.car--luxury button:hover {
+  background-color: var(--clr-cyan-700);
+}
+
+.footer {
+  font-size: 12px;
+  padding: 1rem 0;
+}
+
+.footer a:link,
+.footer a:visited {
+  color: var(--clr-cyan-600);
+}
+
+.footer a:hover,
+.footer a:active {
+  color: var(--clr-cyan-700);
+}
+
+@media (min-width: 1200px) {
+  .component {
+    display: flex;
+    height: 500px;
+  }
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .column button {
+    margin-top: auto;
+    align-self: flex-start;
+  }
+}
