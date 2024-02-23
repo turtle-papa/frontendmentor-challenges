@@ -1,0 +1,133 @@
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-cyan: hsl(180, 62%, 55%);
+  --clr-orange: hsl(34, 97%, 64%);
+  --clr-blue: hsl(212, 86%, 64%);
+
+  --clr-neutral-blue-700: hsl(234, 12%, 34%);
+  --clr-neutral-blue-500: hsl(229, 6%, 66%);
+  --clr-neutral-white: hsl(0, 0%, 98%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  justify-items: center;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: var(--clr-neutral-white);
+  color: var(--clr-neutral-blue-500);
+}
+
+main {
+  max-width: 1115px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: var(--clr-neutral-blue-700);
+}
+
+.title strong {
+  font-weight: 600;
+}
+
+.text {
+  text-align: center;
+}
+
+.items {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 15px;
+}
+
+.item {
+  background-color: white;
+  padding: 2rem;
+  border-top: solid 0.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  height: 250px;
+  box-shadow: 2px 2px 8px -3px rgba(0, 0, 0, 0.1);
+}
+
+.item--supervisor {
+  border-color: var(--clr-cyan);
+}
+
+.item--team {
+  border-color: var(--clr-red);
+}
+
+.item--karma {
+  border-color: var(--clr-orange);
+}
+
+.item--calculator {
+  border-color: var(--clr-blue);
+}
+
+.item h2 {
+  color: var(--clr-neutral-blue-700);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.item img {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.footer {
+  font-size: 12px;
+  padding: 1rem 0;
+}
+
+.footer a:link,
+.footer a:visited {
+  color: var(--clr-neutral-blue-700);
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .items {
+    margin-top: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: max-content max-content;
+    align-items: center;
+    grid-auto-flow: column;
+  }
+
+  .item--supervisor,
+  .item--calculator {
+    grid-row: 1 / 3;
+  }
+}
